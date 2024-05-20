@@ -8,6 +8,7 @@ within a Laravel application.
 - PHP 8.1 or higher
 - Laravel 11 or higher
 - Directus 10 or higher
+- Models must properly configure the `$fillable` property to ensure that mass assignment is handled safely.
 
 ## Installation
 
@@ -52,6 +53,24 @@ class MyRepository extends EloquentDirectusRepository
     }
 }
 ```
+
+### Adding the `$fillable` property to the model
+
+In order for the repository to be able to save data to the database, the model must have a `$fillable` property. This
+property should be an array of fields that are allowed to be mass assigned. This is a security feature to prevent
+unwanted fields from being saved to the database.
+
+```php
+class MyModel extends Model
+{
+    protected $fillable = [
+        'name',
+        'description',
+    ];
+}
+```
+
+For more information on the `$fillable` property, see the Laravel documentation: https://laravel.com/docs/11.x/eloquent#mass-assignment
 
 #### Options
 
