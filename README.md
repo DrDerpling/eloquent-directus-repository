@@ -54,6 +54,20 @@ class MyRepository extends EloquentDirectusRepository
 }
 ```
 
+#### Options
+
+The `ContextFactory::create()` method has 4 parameters. Ill break down each parameter below:
+
+#### Options for `ContextFactory::create()`
+
+| Parameter         | Description                                                                                                                                  |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `$modelClass`     | The class of the model to be loaded. Required.                                                                                               |
+| `$fields`         | An array of fields to be loaded. If empty, all fields will be loaded. Optional.                                                              |
+| `$collectionName` | The name of the collection to be loaded. If empty, the repository will generate the collection name based on the model class. Optional.      |
+| `$orderBy`        | The field used to order the records. If empty, the repository will use the `sort` field. Setting this to `null` disables ordering. Optional. |
+
+
 ### Adding the `$fillable` property to the model
 
 In order for the repository to be able to save data to the database, the model must have a `$fillable` property. This
@@ -71,19 +85,6 @@ class MyModel extends Model
 ```
 
 For more information on the `$fillable` property, see the Laravel documentation: https://laravel.com/docs/11.x/eloquent#mass-assignment
-
-#### Options
-
-The `ContextFactory::create()` method has 4 parameters. Ill break down each parameter below:
-
-#### Options for `ContextFactory::create()`
-
-| Parameter         | Description                                                                                                                                  |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| `$modelClass`     | The class of the model to be loaded. Required.                                                                                               |
-| `$fields`         | An array of fields to be loaded. If empty, all fields will be loaded. Optional.                                                              |
-| `$collectionName` | The name of the collection to be loaded. If empty, the repository will generate the collection name based on the model class. Optional.      |
-| `$orderBy`        | The field used to order the records. If empty, the repository will use the `sort` field. Setting this to `null` disables ordering. Optional. |
 
 ### Methods
 
