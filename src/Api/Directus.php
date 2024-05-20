@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Api;
+namespace DrDerpling\DirectusRepository\Api;
 
 class Directus
 {

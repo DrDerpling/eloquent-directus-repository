@@ -3,7 +3,7 @@
 This package implements a repository pattern that enables the lazy loading of data from Directus into Eloquent models
 within a Laravel application.
 
-## requirements
+## Requirements
 
 - PHP 8.1 or higher
 - Laravel 11 or higher

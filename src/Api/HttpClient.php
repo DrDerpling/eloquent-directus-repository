@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Api;
+namespace DrDerpling\DirectusRepository\Api;
 
 use Exception;
 use Illuminate\Filesystem\FilesystemAdapter;
@@ -14,10 +14,6 @@ use Illuminate\Support\Str;
 
 class HttpClient
 {
-    public function __construct()
-    {
-    }
-
     /**
      * @param string $collection
      * @param array $query
@@ -64,7 +60,6 @@ class HttpClient
         FilesystemAdapter $disk,
         ?string $filePath = null,
     ): string {
-
         // This is required to download the file from Directus
         if (!Arr::has($query, 'download')) {
             $query['download'] = '1';
@@ -116,12 +111,12 @@ class HttpClient
      */
     private function get(string $endpoint, array $query = []): Response
     {
-        $url = $this->getBaseUri() .  Str::trim($endpoint, '/');
+        $url = $this->getBaseUri() . Str::trim($endpoint, '/');
 
         return Http::withToken(config('directus.bearer_token'))->get($url, $query);
     }
 
-    private function getBaseUri() : string
+    private function getBaseUri(): string
     {
         return Str::trim(config('directus.base_uri'), '/') . '/';
     }

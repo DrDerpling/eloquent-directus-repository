@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository;
+namespace DrDerpling\DirectusRepository;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -12,7 +12,7 @@ class DirectusServiceProvider extends ServiceProvider
     {
         // To publish configuration files
         $this->publishes([
-            __DIR__.'/../config/directus.php' => config_path('directus.php'),
+            __DIR__ . '/../config/directus.php' => config_path('directus.php'),
         ], 'directus');
     }
 }

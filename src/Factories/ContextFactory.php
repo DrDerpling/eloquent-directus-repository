@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Factories;
+namespace DrDerpling\DirectusRepository\Factories;
 
-use Drderpling\DirectusRepository\Repositories\Context;
+use DrDerpling\DirectusRepository\Repositories\Context;
 
 class ContextFactory
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Enums;
+namespace DrDerpling\DirectusRepository\Enums;
 
 enum StatusEnum: string
 {

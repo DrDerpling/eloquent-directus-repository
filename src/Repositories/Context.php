@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Repositories;
+namespace DrDerpling\DirectusRepository\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 use Str;

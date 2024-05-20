@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Drderpling\DirectusRepository\Repositories;
+namespace DrDerpling\DirectusRepository\Repositories;
 
-use Drderpling\DirectusRepository\Api\Directus;
+use DrDerpling\DirectusRepository\Api\Directus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as DatabaseCollection;
 use Illuminate\Database\Eloquent\Model;

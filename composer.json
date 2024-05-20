@@ -3,13 +3,13 @@
   "description": "A Laravel package to use Directus as a repository for Eloquent models.",
   "autoload": {
     "psr-4": {
-      "Drderpling\\DirectusRepository\\": "src/"
+      "DrDerpling\\DirectusRepository\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Drderpling\\DirectusRepository\\DirectusServiceProvider"
+        "DrDerpling\\DirectusRepository\\DirectusServiceProvider"
       ]
     }
   }
