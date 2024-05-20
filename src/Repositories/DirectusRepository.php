@@ -107,7 +107,7 @@ abstract class DirectusRepository
      */
     protected function getFromDirectus(int $cmdId = null): Model|array
     {
-        $query = Directus::collection($this->getContext()->getCollectionName());
+        $query = Directus::query($this->getContext()->getCollectionName());
 
         if (!empty($this->getContext()->getFields())) {
             $query->fields(...$this->getContext()->getFields());
